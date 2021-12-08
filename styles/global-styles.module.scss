@@ -1,0 +1,167 @@
+@import './variables.module.scss';
+
+body {
+  // This is a bit of a hack to stop content scrollbar shifting with Web3modal. It
+  // currently (v1.9.3) renders a div at the bottom of the document that is a
+  // sibling to the app root div, so it has no context of the current height
+  // of the application and if the scrollbar is visible or not. Setting
+  // display: contents fixes this.
+  display: contents;
+}
+
+input {
+  margin: 0;
+}
+
+:focus {
+  box-shadow: $primary-color 0 0 2.5px 1.5px;
+
+  // https://css-tricks.com/the-focus-visible-trick/
+  &:not(:focus-visible) {
+    box-shadow: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 136px;
+  line-height: 164px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 91px;
+  line-height: 104px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 40px;
+  line-height: 52px;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 27px;
+  line-height: 35px;
+  font-weight: 300;
+}
+
+a {
+  color: $secondary-color;
+  border: 0;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.textNormal {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.textLarge {
+  font-size: 27px;
+  line-height: 40px;
+}
+
+.textXLarge {
+  font-size: 40px;
+  line-height: 52px;
+}
+
+.textSmall {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.textXSmall {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.primaryColor {
+  color: $primary-color;
+}
+
+.secondaryColor {
+  color: $secondary-color;
+}
+
+.tertiaryColor {
+  color: $tertiary-color;
+}
+
+.greenColor {
+  color: $green-color;
+}
+
+.pinkColor {
+  color: $pink-color;
+}
+
+.violetColor {
+  color: $violet-color;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.textRight {
+  text-align: right;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.mtXl {
+  margin-top: 32px;
+}
+
+.mbLg {
+  margin-bottom: 24px;
+}
+
+.mlXl {
+  margin-left: 32px;
+}
+
+.helpIcon {
+  margin-left: $space-md;
+  vertical-align: middle;
+}
